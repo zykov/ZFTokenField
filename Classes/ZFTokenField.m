@@ -256,4 +256,15 @@
     return YES;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    if ([self.separators containsObject:string]) {
+        if ([self.delegate respondsToSelector:@selector(tokenField:didReturnWithText:)]) {
+            [self.delegate tokenField:self didReturnWithText:textField.text];
+        }
+        return NO;
+    }
+    return YES;
+}
+
 @end

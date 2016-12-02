@@ -25,6 +25,7 @@
     self.tokenField.dataSource = self;
     self.tokenField.delegate = self;
     self.tokenField.textField.placeholder = @"Enter here";
+    self.tokenField.separators = [NSSet setWithArray:@[@",", @" "]];
     [self.tokenField reloadData];
     
     [self.tokenField.textField becomeFirstResponder];

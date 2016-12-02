@@ -37,6 +37,8 @@
 @property (nonatomic, weak) IBOutlet id<ZFTokenFieldDelegate> delegate;
 
 @property (nonatomic, strong, readonly) ZFTokenTextField *textField;
+@property (nonatomic, strong) NSSet<NSString *> *separators;
+
 
 - (void)reloadData;
 - (NSUInteger)numberOfToken;
